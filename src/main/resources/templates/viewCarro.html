@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title> PRODUTO </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+<th>
+ 
+    <h2>
+        <b>Detalhes do produto procurado</b>
+    </h2>
+
+</th>
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>Codigo</th>
+      <th>Modelo</th>
+      <th>Ano</th>
+      <th>Cor</th>
+      <th>Chassi</th>
+      <th>Motor</th>
+    </tr>
+    <tr>
+      <td> 
+      		<h5 th:text="${cod}"></h5>
+      </td>
+      <td>
+            <h5 th:text="${p?.modelo}"></h5>
+      </td>
+      <td>
+          <h5 th:text="${p?.ano}"></h5>
+      </td>
+      <td>
+          <h5 th:text="${p?.cor}"></h5>
+      </td>
+      <td>
+        <h5 th:text="${p?.chassi}"></h5>
+    </td>
+    <td>
+        <h5 th:text="${p?.motor}"></h5>
+    </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
