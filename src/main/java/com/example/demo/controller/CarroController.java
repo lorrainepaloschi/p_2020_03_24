@@ -16,16 +16,15 @@ import org.springframework.web.servlet.ModelAndView;
  * CarroController
  */
 @Controller
-@RequestMapping("/Carro")
+@RequestMapping("/app")
 
 public class CarroController {
     @Autowired
     private CarroService sc;
 
     public CarroController(){
-
-        sc = new CarroService();
     }
+    
     @GetMapping("/carro/{cod}")
     public ModelAndView getCarroByID(@PathVariable("cod")int cod){
         Carro c = sc.getCarroByID(cod);
