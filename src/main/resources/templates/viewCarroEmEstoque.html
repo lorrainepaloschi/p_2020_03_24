@@ -16,27 +16,27 @@
             <th>Chassi</th>
             <th>Motor</th>
         </tr>
-        <tr th:each="item : ${c}">
-            <div th:each="i : ${item}">
-                <td> 
-                    <h5 th:text="${i.value.codigo}"></h5>
-                    </td>
-                    <td>        
-                        <h5 th:text="${i.value.Modelo}"></h5>
-                    </td>
-                    <td>
-                    <h5 th:text="${i.value.Ano}"></h5>
-                    </td>
-                    <td>
-                    <h5 th:text="${i.value.Cor}"><h5>
-                    </td>
-                    <td>
-                    <h5 th:text="${i.value.Chassi}"><h5>
-                    </td>
-                    <td>
-                    <h5 th:text="${i.value.Motor}"><h5>
-                    </td>
-            </div>
+        <tr th:each="item : ${listCarros}"></tr>
+            
+            <td> 
+                <h5 th:text="${item?.codigo}"></h5>
+                </td>
+                <td>        
+                <h5 th:text="${item?.modelo}"></h5>
+                </td>
+                <td>
+                <h5 th:text="${item?.ano}"></h5>
+                </td>
+                <td>
+                <h5 th:text="${item?.cor}"><h5>
+                </td>
+                <td>
+                <h5 th:text="${item?.chassi}"><h5>
+                </td>
+                <td>
+                <h5 th:text="${item?.motor}"><h5>
+                </td>
+        
             
         </tr>
     </table>

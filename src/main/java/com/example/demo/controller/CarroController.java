@@ -24,7 +24,7 @@ public class CarroController {
 
     public CarroController(){
     }
-    
+
     @GetMapping("/carro/{cod}")
     public ModelAndView getCarroByID(@PathVariable("cod")int cod){
         Carro c = sc.getCarroByID(cod);
@@ -48,7 +48,7 @@ public class CarroController {
             return new ModelAndView("viewCarroErro");
         }
         else{
-            ModelAndView mv = new ModelAndView("viewCarros");
+            ModelAndView mv = new ModelAndView("viewCarroEmEstoque");
             mv.addObject("listCarros", listCarros);
             return mv;
         }
